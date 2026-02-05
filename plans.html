@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<audio autoplay loop>
+<audio autoplay loop preload="auto">
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -37,21 +37,22 @@
   function lockPlan(plan) {
     localStorage.setItem("weekendPlan", plan);
 
-    // 🔴 REPLACE WITH YOUR NUMBER (country code, no +)
-    const phoneNumber = "917483324746";
-
-    const message =
-      `💍 Anniversary weekend locked!\nMomo chose: ${plan} ❤️`;
-    const encodedMessage = encodeURIComponent(message);
-
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
-      "_blank"
+    // Send silently to Google Form
+    fetch(
+      "https://docs.google.com/forms/d/e/1FAIpQLSc5Aiy5sjoO9Ud-yv_lVPHEgep45SuwdYKMWzIPnCtsF-fe6A/formResponse",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "entry.1794440939=" + encodeURIComponent(plan)
+      }
     );
 
     setTimeout(() => {
       window.location.href = "final.html";
-    }, 500);
+    }, 400);
   }
 </script>
 
