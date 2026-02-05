@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>This Anniversary Weekend 💍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+  <h1>This anniversary weekend, Momo… you decide 💍</h1>
+  <p>One choice. One memory. Just us ❤️</p>
+
+  <div class="options">
+    <button class="option" onclick="lockPlan('Fancy Stay ✨')">
+      🏨 Fancy Stay
+      <small>Luxury, comfort & us doing nothing</small>
+    </button>
+
+    <button class="option" onclick="lockPlan('Beachy Place 🌊')">
+      🌊 Beachy Place
+      <small>Sand, waves & just us</small>
+    </button>
+
+    <button class="option" onclick="lockPlan('Hill Station 🌿')">
+      🌿 Hill Station
+      <small>Mist, coffee & quiet moments</small>
+    </button>
+  </div>
+</div>
+
+<script>
+  function lockPlan(plan) {
+    localStorage.setItem("weekendPlan", plan);
+
+    // 🔴 REPLACE WITH YOUR NUMBER (country code, no +)
+    const phoneNumber = "917483324746";
+
+    const message =
+      `💍 Anniversary weekend locked!\nMomo chose: ${plan} ❤️`;
+    const encodedMessage = encodeURIComponent(message);
+
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+
+    setTimeout(() => {
+      window.location.href = "final.html";
+    }, 500);
+  }
+</script>
+
+</body>
+</html>

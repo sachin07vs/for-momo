@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 15px;
+  overflow-y: auto;
+}
+
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #ff4b6e;
+}
+
+p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.buttons, .options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn, .option {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.yes {
+  background: #ff4b6e;
+  color: white;
+}
+
+.no {
+  background: #ddd;
+}
+
+.option {
+  background: #ffe3e8;
+}
+
+.option:hover, .btn:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+small {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  margin-top: 5px;
+}
+
+h3 {
+  color: #ff4b6e;
+  margin-top: 20px;
+}
+
+.couple-photo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  margin: 0 auto 20px;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+

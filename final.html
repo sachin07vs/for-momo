@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date Locked 💍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+
+  <!-- Wedding Reception Photo -->
+  <img src="us.jpg" alt="Us" class="couple-photo">
+
+  <!-- Hand-holding message -->
+  <p>
+    Thank you for taking my hand that day —  
+    and for choosing to walk into my life with me.  
+    Every step since has been better because of you ❤️
+  </p>
+
+  <h1>It’s a date, Momo 💍❤️</h1>
+  <p id="chosenPlan"></p>
+
+  <!-- Anniversary in advance message -->
+  <p>
+    Happy anniversary in advance, my love —  
+    because I couldn’t wait to celebrate us and plan something special for you ❤️
+  </p>
+
+  <!-- Core anniversary message -->
+  <p>
+    Still choosing you.  
+    Still grateful for you.  
+    Still in love with you — every single day ❤️
+  </p>
+
+  <h3>Happy Marriage Anniversary, my Momo 🌹</h3>
+
+  <p style="font-size:14px; color:#888;">
+    (P.S. You don’t get to change your mind now 😌)
+  </p>
+
+  <p style="font-size:12px; color:#aaa;">
+    Made with love by Sachin ❤️
+  </p>
+</div>
+
+<script>
+  const plan = localStorage.getItem("weekendPlan");
+  document.getElementById("chosenPlan").innerText =
+    "Weekend Plan Locked: " + plan;
+</script>
+
+</body>
+</html>
