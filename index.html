@@ -30,5 +30,17 @@
   });
 </script>
 
+<script>
+  const music = document.getElementById("bgMusic");
+
+  document.body.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+    }
+  }, { once: true });
+</script>
+
+
 </body>
 </html>
+
